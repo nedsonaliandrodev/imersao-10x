@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia · Site cinematográfico frame a frame</title>
+<meta name="description" content="Passo a passo com perguntas e prompts, imagem a imagem, para criar um site em que o scroll controla um vídeo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Cormorant+Garamond:ital,wght@1,500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b0b0c;--ink2:#141416;--cream:#f6f1ea;--orange:#ff751f;--gold:#dcb46e;--mute:#a59d92;--line:rgba(246,241,234,.12)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--cream);font:400 17px/1.7 Montserrat,system-ui,sans-serif}
+a{color:var(--orange)}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+header{padding:90px 0 50px;border-bottom:1px solid var(--line);background:radial-gradient(60% 80% at 80% 0%,rgba(255,117,31,.18),transparent 70%)}
+.eyebrow{font:600 12px/1 'JetBrains Mono',monospace;letter-spacing:.28em;text-transform:uppercase;color:var(--orange)}
+h1{font:800 clamp(34px,6vw,64px)/1.02 Montserrat,sans-serif;letter-spacing:-.02em;margin:18px 0 18px}
+h1 em,h2 em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;color:var(--gold);letter-spacing:0}
+.lead{font-size:19px;color:#d9d2c7;max-width:62ch}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+nav.toc a{font:500 13px/1 'JetBrains Mono',monospace;color:var(--cream);text-decoration:none;border:1px solid var(--line);padding:10px 14px;border-radius:99px}
+nav.toc a:hover{border-color:var(--orange);color:var(--orange)}
+section{padding:70px 0;border-bottom:1px solid var(--line)}
+h2{font:800 clamp(26px,4vw,40px)/1.1 Montserrat,sans-serif;letter-spacing:-.01em;margin:10px 0 18px}
+h3{font:700 19px/1.3 Montserrat,sans-serif;margin:34px 0 10px}
+.step{font:600 12px/1 'JetBrains Mono',monospace;letter-spacing:.28em;color:var(--gold)}
+ol.q{padding-left:22px}ol.q li{margin:8px 0}
+.box{position:relative;background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px;margin:16px 0}
+.box pre{margin:0;white-space:pre-wrap;word-break:break-word;font:400 14px/1.65 'JetBrains Mono',monospace;color:#efe7da}
+.box .tag{font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:12px;display:block}
+.copy{position:absolute;top:14px;right:14px;font:600 12px/1 'JetBrains Mono',monospace;background:var(--orange);color:#160a03;border:0;border-radius:99px;padding:9px 14px;cursor:pointer}
+.copy.ok{background:var(--gold)}
+.tip{border-left:3px solid var(--orange);padding:6px 0 6px 16px;color:#d9d2c7;margin:18px 0}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 12px/1.2 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+code{font-family:'JetBrains Mono',monospace;font-size:.92em;background:rgba(255,255,255,.06);padding:2px 6px;border-radius:6px}
+footer{padding:50px 0 70px;color:var(--mute);font-size:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="eyebrow">Guia da palestra · Do código à IA</span>
+    <h1>O seu site <em>cinematográfico,</em> frame a frame.</h1>
+    <p class="lead">O visitante não assiste: controla. Desce a página e a câmara avança; sobe e a câmara volta. Aqui está o caminho completo, com as perguntas certas e os prompts prontos a copiar, imagem a imagem.</p>
+    <nav class="toc">
+      <a href="#p0">0 · Perguntas</a><a href="#p1">1 · Roteiro</a><a href="#p2">2 · Imagens</a><a href="#p3">3 · Vídeos</a><a href="#p4">4 · Juntar</a><a href="#p5">5 · Site</a><a href="#p6">6 · 21st.dev</a><a href="#p7">7 · Publicar</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="p0">
+  <span class="step">PASSO 0</span>
+  <h2>Responda a estas <em>perguntas</em> antes de abrir qualquer IA</h2>
+  <ol class="q">
+    <li>Qual é o negócio e o que vende? (ex.: relojoaria de luxo, clínica, imobiliária, restaurante)</li>
+    <li>Quem é o cliente ideal e o que ele tem de sentir ao abrir o site?</li>
+    <li>Qual é o objeto ou lugar herói? (o produto, a casa, o prato, o espaço)</li>
+    <li>A viagem numa frase: começa em <b>X</b> e termina em <b>Y</b>. (ex.: começa no relógio e termina dentro do mecanismo)</li>
+    <li>Tem fotos reais do produto ou do espaço? Quais?</li>
+    <li>Duas ou três cores e uma palavra para o estilo (ex.: preto e ouro, “luxo silencioso”).</li>
+    <li>Que texto ou nome tem de aparecer? (escreva exatamente)</li>
+  </ol>
+  <p class="tip">Uma boa viagem cabe numa frase dita em 5 segundos. Se não cabe, tem cenas a mais.</p>
+</section>
+
+<section id="p1">
+  <span class="step">PASSO 1</span>
+  <h2>Peça à IA o <em>roteiro</em> das cenas</h2>
+  <p>Cole no ChatGPT ou no Claude com as suas respostas. Ele devolve as cenas e os prompts de cada imagem e de cada vídeo.</p>
+  <div class="box"><span class="tag">Prompt · roteiro</span><button class="copy">Copiar</button><pre>És diretor de fotografia e diretor de arte de sites cinematográficos.
+Vou criar um site em que o scroll controla um vídeo contínuo (frame a frame).
+
+O meu negócio: [negócio]
+Cliente ideal e sensação: [cliente · sensação]
+Objeto ou lugar herói: [herói]
+A viagem: começa em [X] e termina em [Y]
+Fotos reais que tenho: [lista ou "nenhuma"]
+Cores e estilo: [cores · estilo]
+Texto obrigatório: [texto exato]
+
+Cria um roteiro de 4 a 8 cenas-chave que se ligam umas às outras sem cortes.
+Para cada cena dá-me:
+1. Nome da cena
+2. Prompt de imagem em inglês, 16:9 horizontal, fotorrealista, com câmara e lente, esquema de luz, materiais, profundidade de campo e color grading. Repete a descrição fixa do herói palavra por palavra em todas as cenas.
+3. Prompt de vídeo em inglês para ir desta cena para a seguinte, com primeiro e último frame, um só plano contínuo ("single continuous shot, no cuts"), câmara lenta e a velocidade constante, sem texto no ecrã.
+No fim, dá-me a descrição fixa do herói separada, para eu reutilizar.</pre></div>
+</section>
+
+<section id="p2">
+  <span class="step">PASSO 2</span>
+  <h2>As imagens-chave, <em>uma a uma</em></h2>
+  <p>Gere no ChatGPT (imagens), no Nano Banana ou no Higgsfield. Sempre no mesmo chat, sempre 16:9. Exemplo real usado no site IMERSÃO 10X:</p>
+  <div class="box"><span class="tag">Imagem 1 · o herói</span><button class="copy">Copiar</button><pre>Photorealistic luxury product photograph, 16:9 horizontal. [DESCRIÇÃO FIXA DO HERÓI] standing on a dark polished walnut surface. Shot with a 100mm macro lens at f/4, camera at eye level, slightly angled. Dramatic studio lighting: soft key light from upper left, warm golden rim light behind, deep black background with subtle warm bokeh. Crisp details, cinematic color grading. No other text or logos.</pre></div>
+  <div class="box"><span class="tag">Imagem 2 · aproximação</span><button class="copy">Copiar</button><pre>Using exactly the same [herói] from the previous image, create an extreme macro close-up of [o detalhe mais bonito], 16:9 horizontal. Same lighting, same color grading, very shallow depth of field. No other text.</pre></div>
+  <div class="box"><span class="tag">Imagem 3 · dentro</span><button class="copy">Copiar</button><pre>Photorealistic macro photograph inside the same [herói], as if the camera has passed through [a superfície], 16:9 horizontal. [O que existe lá dentro, com materiais e texturas]. Warm cinematic lighting, shallow depth of field, deep shadows, a sense of scale. No text.</pre></div>
+  <div class="box"><span class="tag">Imagem 4 · revelação</span><button class="copy">Copiar</button><pre>Photorealistic [vista explodida, vista aérea ou plano geral] of the same [herói], 16:9 horizontal, on a deep [cor] background. Same lighting and color grading, cinematic, ultra detailed. No text.</pre></div>
+  <div class="box"><span class="tag">Imagem 5 · na vida real</span><button class="copy">Copiar</button><pre>Photorealistic lifestyle photograph, 16:9 horizontal. The same [herói] [a ser usado ou vivido por uma pessoa num lugar que faça sentido para o cliente] at golden hour. Shot on 85mm at f/2, the hero in sharp focus, warm backlight, soft bokeh. No text.</pre></div>
+  <p class="tip">Gere a imagem 1 até estar perfeita (texto, formas, luz). Só depois passe à 2. A consistência vale mais do que tudo.</p>
+</section>
+
+<section id="p3">
+  <span class="step">PASSO 3</span>
+  <h2>Os vídeos no <em>Seedance</em> ou no <em>Higgsfield</em></h2>
+  <p>Modo imagem para vídeo com <b>primeiro e último frame</b>. O último frame de um vídeo é o primeiro do seguinte: é isso que liga as cenas sem cortes.</p>
+  <table>
+    <tr><th>Vídeo</th><th>Primeiro frame</th><th>Último frame</th></tr>
+    <tr><td>A</td><td>Imagem 1</td><td>Imagem 2</td></tr>
+    <tr><td>B</td><td>Imagem 2</td><td>Imagem 3</td></tr>
+    <tr><td>C</td><td>Imagem 3</td><td>Imagem 4</td></tr>
+    <tr><td>D</td><td>Imagem 4</td><td>Imagem 5</td></tr>
+  </table>
+  <div class="box"><span class="tag">Prompt de vídeo · modelo</span><button class="copy">Copiar</button><pre>Single continuous shot, no cuts. The camera moves slowly forward [de onde para onde], [o que se mexe na cena]. Constant speed, perfectly smooth, no shake, the [herói] stays identical. Warm cinematic lighting. No text on screen.</pre></div>
+  <p class="tip">Teste no modelo barato (Seedance Mini, 720p). Quando o movimento estiver certo, gere a versão final no Seedance 2.0 em 1080p e 10 segundos.</p>
+</section>
+
+<section id="p4">
+  <span class="step">PASSO 4</span>
+  <h2>Juntar sem <em>costuras</em></h2>
+  <ol class="q">
+    <li>No CapCut (ou outro editor), ponha os vídeos em sequência: A, B, C, D.</li>
+    <li>Sem transições. Se houver um salto, corte 2 ou 3 frames no início do vídeo seguinte.</li>
+    <li>Tire o áudio, o texto, os filtros e qualquer marca d’água.</li>
+    <li>Exporte em MP4, 1080p, 30 fps, qualidade máxima.</li>
+  </ol>
+</section>
+
+<section id="p5">
+  <span class="step">PASSO 5</span>
+  <h2>Do vídeo ao <em>site</em>, frame a frame</h2>
+  <p>No Claude Code (ou noutra IA que programe), dentro de uma pasta nova, com o vídeo lá dentro:</p>
+  <div class="box"><span class="tag">Prompt · construir o site</span><button class="copy">Copiar</button><pre>Cria um site em Next.js + Tailwind com um hero cinematográfico controlado pelo scroll.
+O vídeo está em ./video.mp4.
+1. Com o FFmpeg, extrai todos os frames para public/frames/ em WebP (qualidade 80, tamanho original, sem ampliar) e uma versão 9:16 para telemóvel.
+2. Desenha os frames num &lt;canvas&gt; em object-fit cover. O progresso do scroll da secção (cerca de 800vh, sticky) escolhe o frame. Pré-carrega primeiro 1 frame em cada 8 e depois o resto.
+3. Scroll suave com Lenis e parallax leve com o rato.
+4. Headline: [texto], com uma fonte com personalidade (nunca Inter ou Roboto) e entrada animada.
+5. Textos por capítulo que aparecem em trechos do scroll: [capítulos].
+6. Ecrã de carregamento com percentagem real, respeita prefers-reduced-motion e funciona no telemóvel.
+Mostra-me no localhost quando estiver pronto.</pre></div>
+</section>
+
+<section id="p6">
+  <span class="step">PASSO 6</span>
+  <h2>Tirar a cara de IA com o <em>21st.dev</em></h2>
+  <ol class="q">
+    <li>Crie conta em <a href="https://21st.dev" target="_blank" rel="noopener">21st.dev</a>.</li>
+    <li>Vá a <b>API key</b> e gere a sua chave. Guarde-a só para si.</li>
+    <li>No terminal, ligue o MCP ao Claude Code (troque pela sua chave):</li>
+  </ol>
+  <div class="box"><span class="tag">Terminal · instalar o MCP</span><button class="copy">Copiar</button><pre>claude mcp add --transport http 21st https://21st.dev/api/mcp --header "x-api-key: A_SUA_CHAVE"</pre></div>
+  <div class="box"><span class="tag">Prompt · usar componentes premium</span><button class="copy">Copiar</button><pre>Usa o MCP do 21st.dev. Para cada secção do site, procura pelo menos 3 componentes animados (fundos com shader, revelação de texto, galerias presas ao scroll, botões magnéticos, rodapé com wordmark). Escolhe pelo impacto visual e pela marca, adapta cores, tipografia e textos, e diz-me no fim quais usaste.</pre></div>
+</section>
+
+<section id="p7">
+  <span class="step">PASSO 7</span>
+  <h2>Pôr no ar e <em>cumprir a lei</em></h2>
+  <table>
+    <tr><th>Opção</th><th>Quando usar</th></tr>
+    <tr><td>Vercel ou GitHub Pages</td><td>Sites estáticos e landing pages. Grátis para começar.</td></tr>
+    <tr><td>Hostinger (alojamento partilhado)</td><td>Site da empresa, WordPress, email profissional no mesmo sítio.</td></tr>
+    <tr><td>VPS</td><td>Quando há back-end, base de dados, automações ou muito tráfego.</td></tr>
+  </table>
+  <h3>Antes de publicar, o rodapé tem de ter</h3>
+  <ol class="q">
+    <li>Identificação da empresa: nome, NIF, morada, email e contacto.</li>
+    <li>Ligação visível ao Livro de Reclamações Eletrónico.</li>
+    <li>Entidade de Resolução Alternativa de Litígios, se a empresa estiver vinculada a uma.</li>
+    <li>Política de Privacidade e Política de Cookies, com banner que deixe recusar tão facilmente como aceitar.</li>
+    <li>Termos e condições, se vender online.</li>
+    <li>Junto ao telefone, o custo da chamada (ex.: “Chamada para a rede móvel nacional”).</li>
+  </ol>
+  <p class="tip">Isto é um resumo para orientação, não aconselhamento jurídico. Em caso de dúvida, confirme com um jurista ou contabilista.</p>
+</section>
+
+</main>
+<footer><div class="wrap">Guia da palestra “Do código à IA” · exemplos: <a href="https://nedsonaliandrodev.github.io/imersao-10x/">IMERSÃO 10X</a> e <a href="https://alameda-alphaville.vercel.app/">Alameda</a></div></footer>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){var t=b.parentElement.querySelector('pre').innerText;navigator.clipboard.writeText(t).then(function(){b.textContent='Copiado';b.classList.add('ok');setTimeout(function(){b.textContent='Copiar';b.classList.remove('ok')},1800)})})});
+</script>
+</body>
+</html>
