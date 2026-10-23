@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Efeitos WebGL do 21st.dev mantidos como vieram do autor
+    "src/components/fx/**",
   ]),
 ]);
 

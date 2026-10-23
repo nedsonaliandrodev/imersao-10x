@@ -32,6 +32,16 @@ export default function SmoothScroll() {
     };
     document.addEventListener("click", anchors);
 
+    /* ?ver=<id>&off=<ecrãs> abre a página já numa secção (útil para rever e para links diretos) */
+    const q = new URLSearchParams(location.search);
+    const ver = q.get("ver");
+    if (ver) {
+      setTimeout(() => {
+        const el = document.getElementById(ver);
+        if (el) lenis.scrollTo(el.getBoundingClientRect().top + window.scrollY + Number(q.get("off") || 0) * window.innerHeight, { immediate: true });
+      }, 1200);
+    }
+
     return () => {
       document.removeEventListener("click", anchors);
       gsap.ticker.remove(tick);

@@ -1,6 +1,6 @@
 import HeroCinema from "@/components/HeroCinema";
 import SmoothScroll from "@/components/SmoothScroll";
-import { Nav, Manifesto, Numbers, Anatomia, Galeria, NoPulso, Specs, Reserva, Footer } from "@/components/Sections";
+import { Nav, Manifesto, Eclipse, Lupa, Materia, Specs, Reserva, Footer } from "@/components/Sections";
 
 export default function Home() {
   return (
@@ -9,10 +9,9 @@ export default function Home() {
       <Nav />
       <HeroCinema />
       <Manifesto />
-      <Numbers />
-      <Anatomia />
-      <Galeria />
-      <NoPulso />
+      <Eclipse />
+      <Lupa />
+      <Materia />
       <Specs />
       <Reserva />
       <Footer />

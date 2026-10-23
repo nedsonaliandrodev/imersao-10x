@@ -1,18 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Bodoni_Moda, Instrument_Serif, Manrope, IBM_Plex_Mono } from "next/font/google";
+import { Cinzel, Cormorant_Garamond, Manrope, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const display = Bodoni_Moda({
+const display = Cinzel({
   variable: "--font-display",
   subsets: ["latin"],
-  axes: ["opsz"],
+  weight: ["400", "500"],
 });
 
-const accent = Instrument_Serif({
+const accent = Cormorant_Garamond({
   variable: "--font-accent",
   subsets: ["latin"],
-  weight: "400",
-  style: ["italic", "normal"],
+  weight: ["300", "400"],
+  style: ["italic"],
 });
 
 const body = Manrope({

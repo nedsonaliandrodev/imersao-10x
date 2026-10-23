@@ -66,11 +66,13 @@ export function ScrollWordReveal({
   accentWords = [],
   kicker,
   footer,
+  background,
 }: {
   text: string
   accentWords?: string[]
   kicker?: ReactNode
   footer?: ReactNode
+  background?: ReactNode
 }) {
   const targetRef = useRef<HTMLElement>(null)
   const reducedMotion = useReducedMotion()
@@ -83,8 +85,9 @@ export function ScrollWordReveal({
 
   return (
     <section ref={targetRef} className="relative h-[260vh]" aria-label={text}>
-      <div className="sticky top-0 flex h-screen items-center">
-        <div className="wrap grid w-full grid-cols-12 gap-x-6">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        {background}
+        <div className="wrap relative z-10 grid w-full grid-cols-12 gap-x-6">
           <div className="col-span-12 mb-10 flex items-center gap-4 md:col-span-2 md:mb-0 md:flex-col md:items-start">
             {kicker}
             <div className="relative hidden h-40 w-px overflow-hidden bg-[color:var(--line)] md:block" aria-hidden="true">
