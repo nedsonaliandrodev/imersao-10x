@@ -166,6 +166,7 @@ img { user-select: none; -webkit-user-drag: none; }
 .cut { display: inline-block; overflow: hidden; padding-top: 0.32em; margin-top: -0.32em; padding-bottom: 0.04em; }
 .cut__in {
   display: inline-block;
+  padding-top: 0.32em; margin-top: -0.32em;
   transform: translateY(110%);
   background: linear-gradient(176deg, #f7efdc 0%, #ede6d8 34%, #cdb27a 62%, #f0e3c2 78%, #a8874c 100%);
   -webkit-background-clip: text; background-clip: text;
