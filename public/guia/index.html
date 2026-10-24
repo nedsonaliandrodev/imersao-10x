@@ -49,7 +49,7 @@ footer{padding:50px 0 70px;color:var(--mute);font-size:14px}
     <p class="lead">O mesmo caminho que criou estes dois sites. Com o Higgsfield ligado ao Claude Code, tudo acontece numa conversa: perguntas, imagens, vídeos, o site frame a frame e a publicação.</p>
     <div class="demos"><a href="https://nedsonaliandrodev.github.io/sites-cinematograficos/pivoine/" target="_blank" rel="noopener">Ver o Pivoine</a><a class="alt" href="https://nedsonaliandrodev.github.io/sites-cinematograficos/ambar/" target="_blank" rel="noopener">Ver o Ámbar</a><a class="alt" href="https://alameda-alphaville.vercel.app/" target="_blank" rel="noopener">Ver o Alameda</a><a class="alt" href="https://nedsonaliandrodev.github.io/imersao-10x/" target="_blank" rel="noopener">Ver o IMERSÃO 10X</a></div>
     <nav class="toc">
-      <a href="#p1">1 · Claude Code</a><a href="#p2">2 · Higgsfield</a><a href="#p3">3 · Ligar por MCP</a><a href="#p4">4 · 21st.dev</a><a href="#imagens">Atalho · imagens</a><a href="#p5">5 · O prompt mestre</a><a href="#p6">6 · Exemplos</a><a href="#p7">7 · Domínio</a><a href="#p8">8 · Publicar</a>
+      <a href="#p1">1 · Claude Code</a><a href="#p2">2 · Higgsfield</a><a href="#p3">3 · Ligar por MCP</a><a href="#p4">4 · 21st.dev</a><a href="#imagens">Imagens pro</a><a href="#higgsfield-cc">Vídeo no Claude Code</a><a href="#modos">Tipos de scroll</a><a href="#planos">10 planos</a><a href="#p5">5 · O prompt mestre</a><a href="#p6">6 · Exemplos</a><a href="#p7">7 · Domínio</a><a href="#p8">8 · Publicar</a>
     </nav>
   </div>
 </header>
@@ -75,7 +75,7 @@ footer{padding:50px 0 70px;color:var(--mute);font-size:14px}
   <ol class="q">
     <li>Vá a <a href="https://higgsfield.ai" target="_blank" rel="noopener">higgsfield.ai</a> e crie conta (Google ou email).</li>
     <li>Escolha um plano com créditos. As imagens e sobretudo os vídeos gastam créditos: comece com testes baratos.</li>
-    <li>Dentro do Higgsfield tem os modelos de imagem (Nano Banana Pro, GPT Image) e de vídeo (Seedance 2.0, Kling, Veo).</li>
+    <li>Dentro do Higgsfield tem os modelos de imagem (Nano Banana Pro, GPT Image) e de vídeo (Seedance 2.5, Kling, Veo).</li>
   </ol>
   <p class="tip">Quem tem CapCut Pro também tem acesso ao Seedance. Mas com o Higgsfield ligado ao Claude Code não precisa de mais nenhuma ferramenta.</p>
 </section>
@@ -103,31 +103,144 @@ footer{padding:50px 0 70px;color:var(--mute);font-size:14px}
 </section>
 
 <section id="imagens">
-  <span class="step">ATALHO</span>
-  <h2>Imagem a imagem no <em>ChatGPT</em> ou no <em>Nano Banana</em></h2>
-  <p>Sem Claude Code: crie as imagens num chat, uma de cada vez, e depois os vídeos no Seedance. Serve para um site inteiro ou só para uma parte cinematográfica dentro do site que já tem.</p>
-  <div class="box"><span class="tag">ChatGPT ou Nano Banana · imagens passo a passo</span><button class="copy">Copiar</button><pre>Vou criar uma secção de site em que o scroll controla um vídeo, frame a frame.
-Preciso de 8 imagens-chave que se ligam umas às outras, como fotogramas de um só plano.
+  <span class="step">PASSO A PASSO PROFISSIONAL</span>
+  <h2>As imagens, como um <em>diretor de fotografia</em></h2>
+  <p>Um site cinematográfico é um filme de um só plano. Cada imagem é um fotograma-chave desse plano. Se o herói mudar um milímetro entre imagens, o vídeo deforma-se. Por isso este prompt trabalha como uma produção: entrevista, tratamento, bíblia de continuidade, lista de planos e verificação de cada imagem.</p>
+  <div class="box"><span class="tag">ChatGPT · Nano Banana · Higgsfield · briefing de produção</span><button class="copy">Copiar</button><pre>PAPEL
+És diretor de fotografia e diretor de arte de filmes de produto de luxo (nível Apple, Aesop, relojoaria suíça). Vamos produzir os fotogramas-chave de UM plano contínuo para um site em que o scroll controla o vídeo, frame a frame.
 
-Primeiro faz-me estas perguntas, UMA DE CADA VEZ:
-1. Qual é o meu negócio e o produto ou espaço herói?
-2. A viagem numa frase: começa em X e termina em Y.
-3. Cores e estilo.
-4. Que texto tem de aparecer no produto (escrito exatamente)?
+FASE 1 · ENTREVISTA
+Faz-me estas perguntas UMA DE CADA VEZ e espera pela resposta:
+1. Negócio e produto. O que vendes e quanto custa?
+2. Cliente ideal e a emoção que tem de sentir nos primeiros 3 segundos.
+3. O herói: forma, materiais, cores, acabamentos, medidas reais.
+4. Tens fotos reais do herói? (se sim, peço-tas e uso-as como referência obrigatória)
+5. A viagem numa frase: começa em X e termina em Y.
+6. Três referências visuais (marcas, filmes, sites).
+7. Paleta: 2 ou 3 cores.
+8. Texto exato que aparece no produto e onde.
+9. Onde vai no site: (A) hero preso no topo ou (B) filme da página inteira, a descer com o scroll.
 
-Depois:
-- Escreve uma descrição fixa do herói e repete-a em todas as imagens.
-- Cria a IMAGEM 1 e espera pelo meu ok.
-- Cria a IMAGEM 2 com exatamente o mesmo herói, a continuar a anterior, e espera pelo meu ok. E assim até à IMAGEM 8.
-- Todas em 16:9, fotorrealistas, com a mesma luz e o mesmo color grading, sem texto além do que eu pedir.
+FASE 2 · TRATAMENTO
+Propõe 3 viagens diferentes, cada uma numa frase (começa em X, termina em Y, com um momento-uau a meio). Espera que eu escolha.
 
-No fim, dá-me 7 prompts de vídeo para o Seedance: primeiro frame = imagem N, último frame = imagem N+1, "single continuous shot, no cuts", câmara lenta a velocidade constante, sem texto.</pre></div>
-  <div class="box"><span class="tag">Exemplo · uma frase só</span><button class="copy">Copiar</button><pre>Relógio de ouro com mostrador preto e "IMERSÃO 10X": na mesa, o mostrador, dentro do mecanismo, o tourbillon, as peças a separarem-se, o fundo de safira, ao pôr do sol e no pulso.</pre></div>
+FASE 3 · BÍBLIA DE CONTINUIDADE (antes de gerar qualquer imagem)
+Escreve e mostra-me:
+- Descrição fixa do herói com 60 a 100 palavras: forma, proporções, materiais, cores em HEX, acabamentos, texto exato e posição. Esta descrição é repetida palavra por palavra em TODAS as imagens.
+- Cenário e superfícies.
+- Luz: key, fill e rim, direção, temperatura em Kelvin, contraste.
+- Câmara: sensor, lente em mm, abertura, altura e ângulo.
+- Color grading: descrição do look (pretos, meios-tons, altas luzes).
+- Regras do plano: câmara sempre na mesma direção, velocidade constante, sem cortes, sem mudar de lente de repente.
+- Espaço negativo: em que terço fica livre para o texto do site.
+- Lista negra: sem texto extra, sem logótipos inventados, sem mãos deformadas, sem objetos duplicados, sem mudança de cor do herói.
+
+FASE 4 · LISTA DE PLANOS
+10 planos numa tabela: número, o que se vê, distância e posição da câmara, lente, a ÚNICA coisa que muda em relação ao plano anterior, e onde fica o espaço para o texto.
+Espera pela minha aprovação.
+
+FASE 5 · GERAÇÃO, UMA A UMA
+- Gera a IMAGEM 1 em 16:9, fotorrealista, com a bíblia completa no prompt.
+- Antes de ma mostrares, verifica: herói igual à bíblia, texto legível e certo, mãos e dedos corretos, reflexos e sombras coerentes com a luz, nada a mais. Se falhar, refaz.
+- Espera pelo meu ok.
+- IMAGEM 2: usa a imagem 1 como referência, repete a bíblia e muda só o que a lista de planos diz. E assim até à IMAGEM 10.
+- No fim, gera também a versão 9:16 de cada imagem para o telemóvel, com o herói centrado.
+
+FASE 6 · VÍDEO (Seedance 2.5)
+Dá-me 9 prompts de vídeo, um por transição: primeiro frame = imagem N, último frame = imagem N+1, 2 a 3 segundos cada (20 a 30 segundos no total).
+Em cada um: o movimento de câmara com um verbo (avança, mergulha, sobe, orbita), "single continuous shot, no cuts, constant speed, no text, the hero keeps its exact shape and color".</pre></div>
+  <p class="tip">Duas versões do mesmo filme: 16:9 para computador e 9:16 para telemóvel. No telemóvel, um vídeo horizontal perde dois terços da imagem.</p>
+</section>
+
+<section id="higgsfield-cc">
+  <span class="step">NO CLAUDE CODE</span>
+  <h2>Das imagens ao vídeo e ao site, <em>numa conversa</em></h2>
+  <p>Com o Higgsfield ligado por MCP (passo 3), ponha as imagens na pasta do projeto e cole:</p>
+  <div class="box"><span class="tag">Claude Code · vídeo e site frame a frame</span><button class="copy">Copiar</button><pre>Usa o MCP do Higgsfield.
+As imagens estão em ./imagens (imagem-01.png a imagem-10.png, 16:9) e ./imagens-9x16 (versão telemóvel).
+
+1. VÍDEO
+Gera com o Seedance 2.5 as transições entre imagens seguidas: primeiro frame = imagem N, último frame = imagem N+1, 16:9, 1080p, 2 a 3 segundos cada, plano contínuo sem cortes, câmara a velocidade constante, sem texto, o herói mantém a forma e a cor.
+Faz o mesmo em 9:16 com as imagens do telemóvel.
+Antes de gerar, diz-me quantos créditos vai custar e espera pelo meu ok. Gera primeiro UMA transição de teste.
+Junta as transições com FFmpeg num vídeo de 20 a 30 segundos e confirma que não há saltos nas junções.
+
+2. FRAMES
+Extrai todos os frames em WebP (qualidade 80, tamanho original), um conjunto 16:9 e um 9:16.
+Agrupa-os em pacotes de 16 frames para carregar rápido e mostra uma percentagem real no ecrã de carregamento.
+
+3. SITE
+Põe o filme na headline do site, num canvas, frame a frame: o scroll escolhe o frame.
+Modo: [A · hero preso no topo, secção sticky de ~600vh, e depois a página continua normal]
+     ou [B · o filme é a página inteira: o canvas fica fixo atrás, o scroll de toda a página controla o filme e cada secção de texto aparece ao lado, no espaço livre, sem caixas por cima do filme].
+Scroll suave com Lenis, parallax leve com o rato, versão 9:16 no telemóvel, respeita prefers-reduced-motion.
+Componentes do 21st.dev nas outras secções. Mostra-me no localhost.</pre></div>
+</section>
+
+<section id="modos">
+  <span class="step">DOIS TIPOS DE SCROLL</span>
+  <h2>Preso no topo, ou <em>a descer com a página</em></h2>
   <ol class="q">
-    <li>Gere os 7 vídeos no Seedance (no Higgsfield ou no CapCut Pro), com primeiro e último frame.</li>
-    <li>Junte-os sem transições e exporte em 1080p.</li>
-    <li>Dê o vídeo ao Claude Code: “Transforma este vídeo numa secção frame a frame controlada pelo scroll, no meu site.”</li>
+    <li><b>A · Hero preso no topo</b> (IMERSÃO 10X, Alameda): a primeira secção fica presa enquanto o filme corre. Quando acaba, a página continua com as secções normais. É o mais simples e o mais leve.</li>
+    <li><b>B · O filme é a página inteira</b> (Ámbar, Pivoine): o filme fica atrás de toda a página e avança do topo ao rodapé. Os textos aparecem ao lado, no espaço livre, em cada capítulo. Pede o espaço negativo planeado na bíblia de continuidade e um vídeo 9:16 próprio para telemóvel.</li>
   </ol>
+</section>
+
+<section id="planos">
+  <span class="step">LISTAS DE PLANOS</span>
+  <h2>Os 10 planos de cada <em>exemplo</em></h2>
+  <h3 id="ambar">Ámbar · sérum de vitamina C · modo B</h3>
+  <div class="box"><span class="tag">Ámbar · 10 planos</span><button class="copy">Copiar</button><pre>Herói: frasco conta-gotas de vidro âmbar, 30 ml, tampa de borracha branca, sérum dourado translúcido. Fundo laranja sanguíneo (#E8530E). Luz quente de estúdio, contraluz dourado. Espaço livre no terço esquerdo.
+1. O frasco de pé numa poça rasa de sérum, fundo laranja, câmara à altura do frasco, 85 mm.
+2. Uma gota cai do conta-gotas e toca a poça (coroa de gota), a mesma câmara.
+3. Uma fatia de laranja sanguínea entra em queda por cima do frasco.
+4. A fatia toca o sérum e abre ondas concêntricas douradas.
+5. A câmara desce até à superfície do líquido, reflexos dourados.
+6. A câmara mergulha no sérum: luz âmbar, pequenas bolhas.
+7. Macro extremo: uma única gota enche o enquadramento.
+8. A gota pousa na pele real de uma bochecha, com manchas escuras visíveis.
+9. Dois dedos espalham o sérum em movimento suave.
+10. A pele uniforme e luminosa, as manchas atenuadas, luz quente.
+Vídeo: 9 transições de 2 a 3 s no Seedance 2.5; versão 9:16 com o frasco centrado.</pre></div>
+  <h3 id="pivoine">Pivoine · creme de peónia · modo B</h3>
+  <div class="box"><span class="tag">Pivoine · 10 planos</span><button class="copy">Copiar</button><pre>Herói: frasco de vidro rosado com tampa roxa escura brilhante, creme branco e sedoso. Peónias rosa com gotas de orvalho. Fundo pérola rosado (#F4E8EE). Luz suave de manhã. Espaço livre no terço esquerdo.
+1. Botão de peónia fechado com gotas de orvalho, fundo pérola, 100 mm macro.
+2. As pétalas começam a abrir devagar.
+3. A flor aberta revela o frasco de vidro lá dentro.
+4. O frasco sobe de dentro da flor.
+5. O frasco flutua acima das pétalas, a câmara sobe com ele.
+6. A câmara chega à altura da tampa roxa.
+7. A tampa começa a subir a direito.
+8. A tampa afasta-se e o creme aparece.
+9. A câmara olha de cima para o creme em espiral.
+10. Macro do creme sedoso, luz suave.
+Vídeo: 9 transições de 2 a 3 s no Seedance 2.5; versão 9:16 com a flor centrada.</pre></div>
+  <h3 id="alameda">Alameda · moradia de luxo · modo A</h3>
+  <div class="box"><span class="tag">Alameda · 10 planos</span><button class="copy">Copiar</button><pre>Herói: moradia moderna com fachada em vidro escuro, madeira e pedra, jardim tropical. Luz de fim de tarde a passar para noite. Espaço livre ao centro para o título.
+1. Rua à frente da casa ao fim da tarde, câmara à altura dos olhos, 24 mm.
+2. A câmara avança pela entrada, palmeiras a emoldurar.
+3. A fachada em vidro reflete o céu laranja.
+4. As primeiras luzes da casa acendem-se.
+5. A câmara aproxima-se da porta de madeira.
+6. A porta abre e revela a sala.
+7. Dentro da sala, o céu já azul-escuro pelas janelas.
+8. As luzes interiores acendem-se uma a uma.
+9. Vista da sala para o jardim iluminado.
+10. A casa toda acesa, plano geral à noite.
+Vídeo: 9 transições de 2 a 3 s no Seedance 2.5.</pre></div>
+  <h3 id="imersao">IMERSÃO 10X · relógio · modo A</h3>
+  <div class="box"><span class="tag">IMERSÃO 10X · 10 planos</span><button class="copy">Copiar</button><pre>Herói: relógio em ouro amarelo 18k, 41 mm, luneta canelada, bracelete de três elos, mostrador preto sunburst com "IMERSÃO 10X" em serifa dourada por baixo das 12h, data às 3h. Fundo preto, luz quente de estúdio. Espaço livre ao centro para o título.
+1. O relógio de pé numa mesa de nogueira escura, 100 mm, f/4.
+2. Aproximação ao mostrador, "IMERSÃO 10X" legível.
+3. A câmara atravessa o vidro e o mostrador e entra no mecanismo.
+4. Voo entre engrenagens, pontes de ródio preto e rubis.
+5. O tourbillon a girar, macro extremo.
+6. As peças começam a separar-se.
+7. Vista explodida completa num só eixo.
+8. As peças voltam a juntar-se e o relógio vira-se: fundo de safira.
+9. O relógio a flutuar diante de um pôr do sol no Mediterrâneo.
+10. O relógio no pulso, num terraço ao pôr do sol.
+Vídeo: 9 transições de 2 a 3 s no Seedance 2.5.</pre></div>
 </section>
 
 <section id="p5">
@@ -155,7 +268,7 @@ Antes de gerar, diz-me quantos créditos vai custar e espera pelo meu ok.
 Mostra-me as 10 e refaz as que eu pedir.
 
 FASE 3 · VÍDEOS
-Com as imagens aprovadas, gera no Seedance 2.0 (via Higgsfield) 9 vídeos de transição: primeiro frame = imagem N, último frame = imagem N+1.
+Com as imagens aprovadas, gera no Seedance 2.5 (via Higgsfield) 9 vídeos de transição: primeiro frame = imagem N, último frame = imagem N+1.
 Em todos: "single continuous shot, no cuts", câmara lenta a velocidade constante, sem texto, 16:9, 1080p.
 Testa primeiro um vídeo em resolução baixa. Diz-me o custo total e espera pelo meu ok antes dos restantes.
 
