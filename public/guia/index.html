@@ -49,7 +49,7 @@ footer{padding:50px 0 70px;color:var(--mute);font-size:14px}
     <p class="lead">O mesmo caminho que criou estes dois sites. Com o Higgsfield ligado ao Claude Code, tudo acontece numa conversa: perguntas, imagens, vídeos, o site frame a frame e a publicação.</p>
     <div class="demos"><a href="https://nedsonaliandrodev.github.io/sites-cinematograficos/pivoine/" target="_blank" rel="noopener">Ver o Pivoine</a><a class="alt" href="https://nedsonaliandrodev.github.io/sites-cinematograficos/ambar/" target="_blank" rel="noopener">Ver o Ámbar</a><a class="alt" href="https://alameda-alphaville.vercel.app/" target="_blank" rel="noopener">Ver o Alameda</a><a class="alt" href="https://nedsonaliandrodev.github.io/imersao-10x/" target="_blank" rel="noopener">Ver o IMERSÃO 10X</a></div>
     <nav class="toc">
-      <a href="#p1">1 · Claude Code</a><a href="#p2">2 · Higgsfield</a><a href="#p3">3 · Ligar por MCP</a><a href="#p4">4 · 21st.dev</a><a href="#p5">5 · O prompt mestre</a><a href="#p6">6 · Exemplos</a><a href="#p7">7 · Domínio</a><a href="#p8">8 · Publicar</a>
+      <a href="#p1">1 · Claude Code</a><a href="#p2">2 · Higgsfield</a><a href="#p3">3 · Ligar por MCP</a><a href="#p4">4 · 21st.dev</a><a href="#imagens">Atalho · imagens</a><a href="#p5">5 · O prompt mestre</a><a href="#p6">6 · Exemplos</a><a href="#p7">7 · Domínio</a><a href="#p8">8 · Publicar</a>
     </nav>
   </div>
 </header>
@@ -100,6 +100,34 @@ footer{padding:50px 0 70px;color:var(--mute);font-size:14px}
   </ol>
   <div class="box"><span class="tag">Terminal · ligar o 21st.dev</span><button class="copy">Copiar</button><pre>claude mcp add --transport http --scope user 21st https://21st.dev/api/mcp --header "x-api-key: A_SUA_CHAVE"</pre></div>
   <p class="warn">A chave é como uma password. Não a mostre em ecrã, não a mande por mensagem e não a cole em sites.</p>
+</section>
+
+<section id="imagens">
+  <span class="step">ATALHO</span>
+  <h2>Imagem a imagem no <em>ChatGPT</em> ou no <em>Nano Banana</em></h2>
+  <p>Sem Claude Code: crie as imagens num chat, uma de cada vez, e depois os vídeos no Seedance. Serve para um site inteiro ou só para uma parte cinematográfica dentro do site que já tem.</p>
+  <div class="box"><span class="tag">ChatGPT ou Nano Banana · imagens passo a passo</span><button class="copy">Copiar</button><pre>Vou criar uma secção de site em que o scroll controla um vídeo, frame a frame.
+Preciso de 8 imagens-chave que se ligam umas às outras, como fotogramas de um só plano.
+
+Primeiro faz-me estas perguntas, UMA DE CADA VEZ:
+1. Qual é o meu negócio e o produto ou espaço herói?
+2. A viagem numa frase: começa em X e termina em Y.
+3. Cores e estilo.
+4. Que texto tem de aparecer no produto (escrito exatamente)?
+
+Depois:
+- Escreve uma descrição fixa do herói e repete-a em todas as imagens.
+- Cria a IMAGEM 1 e espera pelo meu ok.
+- Cria a IMAGEM 2 com exatamente o mesmo herói, a continuar a anterior, e espera pelo meu ok. E assim até à IMAGEM 8.
+- Todas em 16:9, fotorrealistas, com a mesma luz e o mesmo color grading, sem texto além do que eu pedir.
+
+No fim, dá-me 7 prompts de vídeo para o Seedance: primeiro frame = imagem N, último frame = imagem N+1, "single continuous shot, no cuts", câmara lenta a velocidade constante, sem texto.</pre></div>
+  <div class="box"><span class="tag">Exemplo · uma frase só</span><button class="copy">Copiar</button><pre>Relógio de ouro com mostrador preto e "IMERSÃO 10X": na mesa, o mostrador, dentro do mecanismo, o tourbillon, as peças a separarem-se, o fundo de safira, ao pôr do sol e no pulso.</pre></div>
+  <ol class="q">
+    <li>Gere os 7 vídeos no Seedance (no Higgsfield ou no CapCut Pro), com primeiro e último frame.</li>
+    <li>Junte-os sem transições e exporte em 1080p.</li>
+    <li>Dê o vídeo ao Claude Code: “Transforma este vídeo numa secção frame a frame controlada pelo scroll, no meu site.”</li>
+  </ol>
 </section>
 
 <section id="p5">
