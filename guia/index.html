@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia · Site cinematográfico com Claude Code e Higgsfield</title>
+<meta name="description" content="Do Claude Code ao site no ar: Higgsfield por MCP, 10 imagens, vídeos Seedance, site frame a frame e publicação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Cormorant+Garamond:ital,wght@1,500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b0b0c;--ink2:#141416;--cream:#f6f1ea;--orange:#ff751f;--gold:#dcb46e;--mute:#a59d92;--line:rgba(246,241,234,.12)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--cream);font:400 17px/1.7 Montserrat,system-ui,sans-serif}
+a{color:var(--orange)}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+header{padding:90px 0 50px;border-bottom:1px solid var(--line);background:radial-gradient(60% 80% at 80% 0%,rgba(255,117,31,.18),transparent 70%)}
+.eyebrow{font:600 12px/1 'JetBrains Mono',monospace;letter-spacing:.28em;text-transform:uppercase;color:var(--orange)}
+h1{font:800 clamp(34px,6vw,62px)/1.02 Montserrat,sans-serif;letter-spacing:-.02em;margin:18px 0}
+h1 em,h2 em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;color:var(--gold);letter-spacing:0}
+.lead{font-size:19px;color:#d9d2c7;max-width:62ch}
+.demos{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.demos a{font:600 14px/1 Montserrat,sans-serif;color:#160a03;background:var(--orange);text-decoration:none;padding:14px 18px;border-radius:99px}
+.demos a.alt{background:transparent;color:var(--cream);border:1px solid var(--line)}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+nav.toc a{font:500 13px/1 'JetBrains Mono',monospace;color:var(--cream);text-decoration:none;border:1px solid var(--line);padding:10px 14px;border-radius:99px}
+nav.toc a:hover{border-color:var(--orange);color:var(--orange)}
+section{padding:66px 0;border-bottom:1px solid var(--line)}
+h2{font:800 clamp(26px,4vw,40px)/1.1 Montserrat,sans-serif;letter-spacing:-.01em;margin:10px 0 18px}
+h3{font:700 19px/1.3 Montserrat,sans-serif;margin:30px 0 10px}
+.step{font:600 12px/1 'JetBrains Mono',monospace;letter-spacing:.28em;color:var(--gold)}
+ol.q{padding-left:22px}ol.q li{margin:8px 0}
+.box{position:relative;background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px;margin:16px 0}
+.box pre{margin:0;white-space:pre-wrap;word-break:break-word;font:400 14px/1.65 'JetBrains Mono',monospace;color:#efe7da}
+.box .tag{font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:12px;display:block;padding-right:90px}
+.copy{position:absolute;top:14px;right:14px;font:600 12px/1 'JetBrains Mono',monospace;background:var(--orange);color:#160a03;border:0;border-radius:99px;padding:9px 14px;cursor:pointer}
+.copy.ok{background:var(--gold)}
+.tip{border-left:3px solid var(--orange);padding:6px 0 6px 16px;color:#d9d2c7;margin:18px 0}
+.warn{border-left:3px solid var(--gold);padding:6px 0 6px 16px;color:#efe1c4;margin:18px 0}
+code{font-family:'JetBrains Mono',monospace;font-size:.92em;background:rgba(255,255,255,.06);padding:2px 6px;border-radius:6px}
+footer{padding:50px 0 70px;color:var(--mute);font-size:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="eyebrow">Guia da palestra · Do código à IA</span>
+    <h1>Do Claude Code ao site <em>no ar,</em> passo a passo.</h1>
+    <p class="lead">O mesmo caminho que criou estes dois sites. Com o Higgsfield ligado ao Claude Code, tudo acontece numa conversa: perguntas, imagens, vídeos, o site frame a frame e a publicação.</p>
+    <div class="demos"><a href="https://nedsonaliandrodev.github.io/sites-cinematograficos/pivoine/" target="_blank" rel="noopener">Ver o Pivoine</a><a class="alt" href="https://nedsonaliandrodev.github.io/sites-cinematograficos/ambar/" target="_blank" rel="noopener">Ver o Ámbar</a><a class="alt" href="https://alameda-alphaville.vercel.app/" target="_blank" rel="noopener">Ver o Alameda</a><a class="alt" href="https://nedsonaliandrodev.github.io/imersao-10x/" target="_blank" rel="noopener">Ver o IMERSÃO 10X</a></div>
+    <nav class="toc">
+      <a href="#p1">1 · Claude Code</a><a href="#p2">2 · Higgsfield</a><a href="#p3">3 · Ligar por MCP</a><a href="#p4">4 · 21st.dev</a><a href="#imagens">Imagens pro</a><a href="#higgsfield-cc">Vídeo no Claude Code</a><a href="#modos">Tipos de scroll</a><a href="#planos">10 planos</a><a href="#p5">5 · O prompt mestre</a><a href="#p6">6 · Exemplos</a><a href="#p7">7 · Domínio</a><a href="#p8">8 · Publicar</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="p1">
+  <span class="step">PASSO 1</span>
+  <h2>Instalar o <em>Claude Code</em></h2>
+  <ol class="q">
+    <li>Precisa de uma conta Claude com plano pago (Pro ou Max).</li>
+    <li>O mais simples: instale a app Claude para computador em <a href="https://claude.ai/download" target="_blank" rel="noopener">claude.ai/download</a> e abra o separador <b>Code</b>.</li>
+    <li>Ou no terminal (Mac e Linux):</li>
+  </ol>
+  <div class="box"><span class="tag">Terminal · Mac e Linux</span><button class="copy">Copiar</button><pre>curl -fsSL https://claude.ai/install.sh | bash</pre></div>
+  <div class="box"><span class="tag">PowerShell · Windows</span><button class="copy">Copiar</button><pre>irm https://claude.ai/install.ps1 | iex</pre></div>
+  <p class="tip">Crie uma pasta nova para cada site (ex.: <code>meu-site</code>) e abra o Claude Code dentro dela. Essa pasta é o seu localhost: tudo fica no seu computador.</p>
+</section>
+
+<section id="p2">
+  <span class="step">PASSO 2</span>
+  <h2>Criar conta no <em>Higgsfield</em></h2>
+  <ol class="q">
+    <li>Vá a <a href="https://higgsfield.ai" target="_blank" rel="noopener">higgsfield.ai</a> e crie conta (Google ou email).</li>
+    <li>Escolha um plano com créditos. As imagens e sobretudo os vídeos gastam créditos: comece com testes baratos.</li>
+    <li>Dentro do Higgsfield tem os modelos de imagem (Nano Banana Pro, GPT Image) e de vídeo (Seedance 2.5, Kling, Veo).</li>
+  </ol>
+  <p class="tip">Quem tem CapCut Pro também tem acesso ao Seedance. Mas com o Higgsfield ligado ao Claude Code não precisa de mais nenhuma ferramenta.</p>
+</section>
+
+<section id="p3">
+  <span class="step">PASSO 3</span>
+  <h2>Ligar o Higgsfield ao Claude Code <em>por MCP</em></h2>
+  <p>MCP é uma ponte: deixa o Claude usar o Higgsfield por si. Cole no terminal:</p>
+  <div class="box"><span class="tag">Terminal · ligar o Higgsfield</span><button class="copy">Copiar</button><pre>claude mcp add --transport http --scope user higgsfield https://mcp.higgsfield.ai/mcp</pre></div>
+  <ol class="q">
+    <li>Abra o Claude Code e escreva <code>/mcp</code>. Escolha <b>higgsfield</b> e faça login: abre o browser para entrar na sua conta. Não há chave para copiar.</li>
+    <li>Para confirmar: <code>claude mcp list</code> mostra o higgsfield como ligado.</li>
+  </ol>
+</section>
+
+<section id="p4">
+  <span class="step">PASSO 4</span>
+  <h2>Ligar o <em>21st.dev</em> (tirar a cara de IA)</h2>
+  <ol class="q">
+    <li>Crie conta em <a href="https://21st.dev" target="_blank" rel="noopener">21st.dev</a> e gere a sua chave em <b>API key</b>.</li>
+    <li>Cole no terminal, com a sua chave no lugar de A_SUA_CHAVE:</li>
+  </ol>
+  <div class="box"><span class="tag">Terminal · ligar o 21st.dev</span><button class="copy">Copiar</button><pre>claude mcp add --transport http --scope user 21st https://21st.dev/api/mcp --header "x-api-key: A_SUA_CHAVE"</pre></div>
+  <p class="warn">A chave é como uma password. Não a mostre em ecrã, não a mande por mensagem e não a cole em sites.</p>
+</section>
+
+<section id="imagens">
+  <span class="step">PASSO A PASSO PROFISSIONAL</span>
+  <h2>As imagens, como um <em>diretor de fotografia</em></h2>
+  <p>Um site cinematográfico é um filme de um só plano. Cada imagem é um fotograma-chave desse plano. Se o herói mudar um milímetro entre imagens, o vídeo deforma-se. Por isso este prompt trabalha como uma produção: entrevista, tratamento, bíblia de continuidade, lista de planos e verificação de cada imagem.</p>
+  <div class="box"><span class="tag">ChatGPT · Nano Banana · Higgsfield · briefing de produção</span><button class="copy">Copiar</button><pre>PAPEL
+És diretor de fotografia e diretor de arte de filmes de produto de luxo (nível Apple, Aesop, relojoaria suíça). Vamos produzir os fotogramas-chave de UM plano contínuo para um site em que o scroll controla o vídeo, frame a frame.
+
+FASE 1 · ENTREVISTA
+Faz-me estas perguntas UMA DE CADA VEZ e espera pela resposta:
+1. Negócio e produto. O que vendes e quanto custa?
+2. Cliente ideal e a emoção que tem de sentir nos primeiros 3 segundos.
+3. O herói: forma, materiais, cores, acabamentos, medidas reais.
+4. Tens fotos reais do herói? (se sim, peço-tas e uso-as como referência obrigatória)
+5. A viagem numa frase: começa em X e termina em Y.
+6. Três referências visuais (marcas, filmes, sites).
+7. Paleta: 2 ou 3 cores.
+8. Texto exato que aparece no produto e onde.
+9. Onde vai no site: (A) hero preso no topo ou (B) filme da página inteira, a descer com o scroll.
+
+FASE 2 · TRATAMENTO
+Propõe 3 viagens diferentes, cada uma numa frase (começa em X, termina em Y, com um momento-uau a meio). Espera que eu escolha.
+
+FASE 3 · BÍBLIA DE CONTINUIDADE (antes de gerar qualquer imagem)
+Escreve e mostra-me:
+- Descrição fixa do herói com 60 a 100 palavras: forma, proporções, materiais, cores em HEX, acabamentos, texto exato e posição. Esta descrição é repetida palavra por palavra em TODAS as imagens.
+- Cenário e superfícies.
+- Luz: key, fill e rim, direção, temperatura em Kelvin, contraste.
+- Câmara: sensor, lente em mm, abertura, altura e ângulo.
+- Color grading: descrição do look (pretos, meios-tons, altas luzes).
+- Regras do plano: câmara sempre na mesma direção, velocidade constante, sem cortes, sem mudar de lente de repente.
+- Espaço negativo: em que terço fica livre para o texto do site.
+- Lista negra: sem texto extra, sem logótipos inventados, sem mãos deformadas, sem objetos duplicados, sem mudança de cor do herói.
+
+FASE 4 · LISTA DE PLANOS
+10 planos numa tabela: número, o que se vê, distância e posição da câmara, lente, a ÚNICA coisa que muda em relação ao plano anterior, e onde fica o espaço para o texto.
+Espera pela minha aprovação.
+
+FASE 5 · GERAÇÃO, UMA A UMA
+- Gera a IMAGEM 1 em 16:9, fotorrealista, com a bíblia completa no prompt.
+- Antes de ma mostrares, verifica: herói igual à bíblia, texto legível e certo, mãos e dedos corretos, reflexos e sombras coerentes com a luz, nada a mais. Se falhar, refaz.
+- Espera pelo meu ok.
+- IMAGEM 2: usa a imagem 1 como referência, repete a bíblia e muda só o que a lista de planos diz. E assim até à IMAGEM 10.
+- No fim, gera também a versão 9:16 de cada imagem para o telemóvel, com o herói centrado.
+
+FASE 6 · VÍDEO (Seedance 2.5)
+Dá-me 9 prompts de vídeo, um por transição: primeiro frame = imagem N, último frame = imagem N+1, 2 a 3 segundos cada (20 a 30 segundos no total).
+Em cada um: o movimento de câmara com um verbo (avança, mergulha, sobe, orbita), "single continuous shot, no cuts, constant speed, no text, the hero keeps its exact shape and color".</pre></div>
+  <p class="tip">Duas versões do mesmo filme: 16:9 para computador e 9:16 para telemóvel. No telemóvel, um vídeo horizontal perde dois terços da imagem.</p>
+</section>
+
+<section id="higgsfield-cc">
+  <span class="step">NO CLAUDE CODE</span>
+  <h2>Das imagens ao vídeo e ao site, <em>numa conversa</em></h2>
+  <p>Com o Higgsfield ligado por MCP (passo 3), ponha as imagens na pasta do projeto e cole:</p>
+  <div class="box"><span class="tag">Claude Code · vídeo e site frame a frame</span><button class="copy">Copiar</button><pre>Usa o MCP do Higgsfield.
+As imagens estão em ./imagens (imagem-01.png a imagem-10.png, 16:9) e ./imagens-9x16 (versão telemóvel).
+
+1. VÍDEO
+Gera com o Seedance 2.5 as transições entre imagens seguidas: primeiro frame = imagem N, último frame = imagem N+1, 16:9, 1080p, 2 a 3 segundos cada, plano contínuo sem cortes, câmara a velocidade constante, sem texto, o herói mantém a forma e a cor.
+Faz o mesmo em 9:16 com as imagens do telemóvel.
+Antes de gerar, diz-me quantos créditos vai custar e espera pelo meu ok. Gera primeiro UMA transição de teste.
+Junta as transições com FFmpeg num vídeo de 20 a 30 segundos e confirma que não há saltos nas junções.
+
+2. FRAMES
+Extrai todos os frames em WebP (qualidade 80, tamanho original), um conjunto 16:9 e um 9:16.
+Agrupa-os em pacotes de 16 frames para carregar rápido e mostra uma percentagem real no ecrã de carregamento.
+
+3. SITE
+Põe o filme na headline do site, num canvas, frame a frame: o scroll escolhe o frame.
+Modo: [A · hero preso no topo, secção sticky de ~600vh, e depois a página continua normal]
+     ou [B · o filme é a página inteira: o canvas fica fixo atrás, o scroll de toda a página controla o filme e cada secção de texto aparece ao lado, no espaço livre, sem caixas por cima do filme].
+Scroll suave com Lenis, parallax leve com o rato, versão 9:16 no telemóvel, respeita prefers-reduced-motion.
+Componentes do 21st.dev nas outras secções. Mostra-me no localhost.</pre></div>
+</section>
+
+<section id="modos">
+  <span class="step">DOIS TIPOS DE SCROLL</span>
+  <h2>Preso no topo, ou <em>a descer com a página</em></h2>
+  <ol class="q">
+    <li><b>A · Hero preso no topo</b> (IMERSÃO 10X, Alameda): a primeira secção fica presa enquanto o filme corre. Quando acaba, a página continua com as secções normais. É o mais simples e o mais leve.</li>
+    <li><b>B · O filme é a página inteira</b> (Ámbar, Pivoine): o filme fica atrás de toda a página e avança do topo ao rodapé. Os textos aparecem ao lado, no espaço livre, em cada capítulo. Pede o espaço negativo planeado na bíblia de continuidade e um vídeo 9:16 próprio para telemóvel.</li>
+  </ol>
+</section>
+
+<section id="planos">
+  <span class="step">LISTAS DE PLANOS</span>
+  <h2>Os 10 planos de cada <em>exemplo</em></h2>
+  <h3 id="ambar">Ámbar · sérum de vitamina C · modo B</h3>
+  <div class="box"><span class="tag">Ámbar · 10 planos</span><button class="copy">Copiar</button><pre>Herói: frasco conta-gotas de vidro âmbar, 30 ml, tampa de borracha branca, sérum dourado translúcido. Fundo laranja sanguíneo (#E8530E). Luz quente de estúdio, contraluz dourado. Espaço livre no terço esquerdo.
+1. O frasco de pé numa poça rasa de sérum, fundo laranja, câmara à altura do frasco, 85 mm.
+2. Uma gota cai do conta-gotas e toca a poça (coroa de gota), a mesma câmara.
+3. Uma fatia de laranja sanguínea entra em queda por cima do frasco.
+4. A fatia toca o sérum e abre ondas concêntricas douradas.
+5. A câmara desce até à superfície do líquido, reflexos dourados.
+6. A câmara mergulha no sérum: luz âmbar, pequenas bolhas.
+7. Macro extremo: uma única gota enche o enquadramento.
+8. A gota pousa na pele real de uma bochecha, com manchas escuras visíveis.
+9. Dois dedos espalham o sérum em movimento suave.
+10. A pele uniforme e luminosa, as manchas atenuadas, luz quente.
+Vídeo: 9 transições de 2 a 3 s no Seedance 2.5; versão 9:16 com o frasco centrado.</pre></div>
+  <h3 id="pivoine">Pivoine · creme de peónia · modo B</h3>
+  <div class="box"><span class="tag">Pivoine · 10 planos</span><button class="copy">Copiar</button><pre>Herói: frasco de vidro rosado com tampa roxa escura brilhante, creme branco e sedoso. Peónias rosa com gotas de orvalho. Fundo pérola rosado (#F4E8EE). Luz suave de manhã. Espaço livre no terço esquerdo.
+1. Botão de peónia fechado com gotas de orvalho, fundo pérola, 100 mm macro.
+2. As pétalas começam a abrir devagar.
+3. A flor aberta revela o frasco de vidro lá dentro.
+4. O frasco sobe de dentro da flor.
+5. O frasco flutua acima das pétalas, a câmara sobe com ele.
+6. A câmara chega à altura da tampa roxa.
+7. A tampa começa a subir a direito.
+8. A tampa afasta-se e o creme aparece.
+9. A câmara olha de cima para o creme em espiral.
+10. Macro do creme sedoso, luz suave.
+Vídeo: 9 transições de 2 a 3 s no Seedance 2.5; versão 9:16 com a flor centrada.</pre></div>
+  <h3 id="alameda">Alameda · moradia de luxo · modo A</h3>
+  <div class="box"><span class="tag">Alameda · 10 planos</span><button class="copy">Copiar</button><pre>Herói: moradia moderna com fachada em vidro escuro, madeira e pedra, jardim tropical. Luz de fim de tarde a passar para noite. Espaço livre ao centro para o título.
+1. Rua à frente da casa ao fim da tarde, câmara à altura dos olhos, 24 mm.
+2. A câmara avança pela entrada, palmeiras a emoldurar.
+3. A fachada em vidro reflete o céu laranja.
+4. As primeiras luzes da casa acendem-se.
+5. A câmara aproxima-se da porta de madeira.
+6. A porta abre e revela a sala.
+7. Dentro da sala, o céu já azul-escuro pelas janelas.
+8. As luzes interiores acendem-se uma a uma.
+9. Vista da sala para o jardim iluminado.
+10. A casa toda acesa, plano geral à noite.
+Vídeo: 9 transições de 2 a 3 s no Seedance 2.5.</pre></div>
+  <h3 id="imersao">IMERSÃO 10X · relógio · modo A</h3>
+  <div class="box"><span class="tag">IMERSÃO 10X · 10 planos</span><button class="copy">Copiar</button><pre>Herói: relógio em ouro amarelo 18k, 41 mm, luneta canelada, bracelete de três elos, mostrador preto sunburst com "IMERSÃO 10X" em serifa dourada por baixo das 12h, data às 3h. Fundo preto, luz quente de estúdio. Espaço livre ao centro para o título.
+1. O relógio de pé numa mesa de nogueira escura, 100 mm, f/4.
+2. Aproximação ao mostrador, "IMERSÃO 10X" legível.
+3. A câmara atravessa o vidro e o mostrador e entra no mecanismo.
+4. Voo entre engrenagens, pontes de ródio preto e rubis.
+5. O tourbillon a girar, macro extremo.
+6. As peças começam a separar-se.
+7. Vista explodida completa num só eixo.
+8. As peças voltam a juntar-se e o relógio vira-se: fundo de safira.
+9. O relógio a flutuar diante de um pôr do sol no Mediterrâneo.
+10. O relógio no pulso, num terraço ao pôr do sol.
+Vídeo: 9 transições de 2 a 3 s no Seedance 2.5.</pre></div>
+</section>
+
+<section id="p5">
+  <span class="step">PASSO 5</span>
+  <h2>O <em>prompt mestre</em></h2>
+  <p>Cole isto no Claude Code, dentro da pasta do site. Ele faz as perguntas, gera as 10 imagens, os vídeos e o site, e mostra-lhe tudo antes de gastar créditos.</p>
+  <div class="box"><span class="tag">Claude Code · prompt mestre</span><button class="copy">Copiar</button><pre>Quero criar um site cinematográfico em que o scroll controla um vídeo, frame a frame.
+Usa o MCP do Higgsfield para as imagens e os vídeos, e o MCP do 21st.dev para os componentes.
+
+FASE 1 · PERGUNTAS
+Faz-me estas perguntas, UMA DE CADA VEZ, e espera pela resposta:
+1. Qual é o teu negócio e o que vendes?
+2. Quem é o teu cliente ideal e o que tem de sentir ao abrir o site?
+3. Qual é o herói do site: o produto, o espaço ou o lugar?
+4. A viagem numa frase: começa em X e termina em Y.
+5. Tens fotos reais do produto ou do espaço? (se sim, peço-te os ficheiros)
+6. Cores e estilo em poucas palavras.
+7. Que texto tem de aparecer, escrito exatamente?
+Depois propõe-me 3 viagens diferentes e espera que eu escolha.
+
+FASE 2 · 10 IMAGENS
+Escreve uma descrição fixa do herói e repete-a palavra por palavra em todos os prompts.
+Gera no Higgsfield 10 imagens-chave, 16:9, fotorrealistas (Nano Banana Pro ou GPT Image), uma por cena da viagem, cada uma a continuar a anterior. Prompt de diretor de fotografia: lente, luz, materiais, profundidade de campo, color grading, sem texto nas imagens.
+Antes de gerar, diz-me quantos créditos vai custar e espera pelo meu ok.
+Mostra-me as 10 e refaz as que eu pedir.
+
+FASE 3 · VÍDEOS
+Com as imagens aprovadas, gera no Seedance 2.5 (via Higgsfield) 9 vídeos de transição: primeiro frame = imagem N, último frame = imagem N+1.
+Em todos: "single continuous shot, no cuts", câmara lenta a velocidade constante, sem texto, 16:9, 1080p.
+Testa primeiro um vídeo em resolução baixa. Diz-me o custo total e espera pelo meu ok antes dos restantes.
+
+FASE 4 · SITE
+1. Junta os 9 vídeos com FFmpeg, sem transições, e confirma que não há cortes.
+2. Extrai todos os frames em WebP (qualidade 80, sem ampliar) e uma versão 9:16 para telemóvel.
+3. Cria um site em Next.js + Tailwind: hero sticky com canvas que desenha o frame conforme o scroll, pré-carregamento progressivo, Lenis, parallax leve com o rato, ecrã de carregamento com percentagem real, prefers-reduced-motion.
+4. Headline com uma fonte com personalidade (nunca Inter nem Roboto) e textos curtos por capítulo da viagem.
+5. Para as outras secções, procura no 21st.dev pelo menos 3 componentes por secção e escolhe pelo impacto. Diz-me quais usaste.
+6. Mostra-me no localhost, no computador e no telemóvel.</pre></div>
+  <p class="tip">O Claude pede sempre autorização antes de gastar créditos. Comece com poucas imagens e só depois gere tudo em alta.</p>
+</section>
+
+<section id="p6">
+  <span class="step">PASSO 6</span>
+  <h2>Respostas de <em>exemplo</em></h2>
+  <h3>Como o Pivoine (cosmética)</h3>
+  <div class="box"><span class="tag">Respostas · creme de rosto</span><button class="copy">Copiar</button><pre>1. Creme de rosto com extrato de peónia, em pequenos lotes.
+2. Mulheres que procuram cuidado natural e premium. Têm de sentir leveza e frescura.
+3. O frasco de creme: vidro rosado, tampa roxa escura, creme branco e sedoso.
+4. Começa numa peónia a abrir, o frasco sobe de dentro da flor, a tampa sai e a câmara acaba a olhar para dentro do creme.
+5. Tenho fotos do frasco (envio os ficheiros).
+6. Rosa pérola e violeta. Luz de manhã, delicado.
+7. O nome da marca e "Peony, at first bloom."</pre></div>
+  <h3>Como o Ámbar (sérum)</h3>
+  <div class="box"><span class="tag">Respostas · sérum de vitamina C</span><button class="copy">Copiar</button><pre>1. Sérum de vitamina C com laranja sanguínea, contra manchas escuras.
+2. Mulheres com manchas e tom irregular. Têm de sentir que o produto funciona.
+3. O frasco conta-gotas de vidro âmbar com o sérum dourado.
+4. Começa no frasco numa poça de sérum, cai uma gota e uma fatia de laranja, a câmara afunda no líquido dourado e termina na pele, com as manchas a desaparecer.
+5. Tenho fotos do frasco (envio os ficheiros).
+6. Laranja sanguínea e dourado. Luz quente, energia.
+7. O nome da marca e "Blood orange, in a dropper."</pre></div>
+  <h3>Como o Alameda (imobiliário)</h3>
+  <div class="box"><span class="tag">Respostas · casa de luxo</span><button class="copy">Copiar</button><pre>1. Moradia de luxo para venda, num condomínio fechado.
+2. Famílias com alto poder de compra. Têm de sentir: "esta casa é minha".
+3. A casa: arquitetura moderna, vidro escuro, madeira e jardim tropical.
+4. Começa na rua ao fim da tarde e termina dentro da sala, à noite, com a casa toda acesa.
+5. Tenho fotos reais da fachada e da sala (envio os ficheiros).
+6. Pedra, madeira e luz quente. Luxo silencioso.
+7. "ALAMEDA" e "A casa acende."</pre></div>
+  <h3>Como o IMERSÃO 10X (produto)</h3>
+  <div class="box"><span class="tag">Respostas · relógio</span><button class="copy">Copiar</button><pre>1. Relógio de luxo em ouro, edição limitada.
+2. Colecionadores. Têm de sentir precisão e exclusividade.
+3. O relógio: ouro amarelo 18k, mostrador preto, luneta canelada, mecanismo com tourbillon.
+4. Começa no relógio em cima da mesa e termina dentro do mecanismo, com as peças a separarem-se.
+5. Não tenho fotos: gerar tudo.
+6. Preto e ouro. Arquitetónico, chique.
+7. "IMERSÃO 10X" no mostrador e "O tempo, visto por dentro."</pre></div>
+</section>
+
+<section id="p7">
+  <span class="step">PASSO 7</span>
+  <h2>Domínio e <em>hospedagem</em></h2>
+  <ol class="q">
+    <li><b>Domínio</b> é a morada: <code>www.asuaempresa.pt</code>. Um endereço <code>.vercel.app</code> ou <code>.lovable.app</code> não passa credibilidade.</li>
+    <li><b>Hospedagem</b> é onde ficam guardados os ficheiros do site: código e imagens.</li>
+    <li>Exemplo para começar: na <a href="https://www.amen.pt/hosting/web-hosting/" target="_blank" rel="noopener">AMEN</a>, o plano Starter custa cerca de 10 € no 1.º ano, com IVA, e inclui um domínio <code>.pt</code> grátis no 1.º ano. Confirme os preços e as renovações no site antes de comprar.</li>
+  </ol>
+</section>
+
+<section id="p8">
+  <span class="step">PASSO 8</span>
+  <h2>Publicar com o <em>Claude Code</em></h2>
+  <p>Duas formas. Em ambas, o Claude Code envia o site sem FTP e sem copiar ficheiros à mão.</p>
+  <h3>Forma A · pelo Chrome</h3>
+  <ol class="q">
+    <li>Instale a extensão <b>Claude in Chrome</b> e entre no painel da hospedagem no seu Chrome.</li>
+    <li>No Claude Code:</li>
+  </ol>
+  <div class="box"><span class="tag">Claude Code · publicar pelo Chrome</span><button class="copy">Copiar</button><pre>Faz o build estático deste site e cria um .zip com a pasta de saída.
+Depois usa o meu Chrome (extensão Claude in Chrome). O painel da minha hospedagem [AMEN] já tem sessão iniciada.
+Abre o gestor de ficheiros do domínio [asuaempresa.pt], envia o .zip para a pasta pública do site e extrai-o lá.
+Não alteres DNS, emails nem outras definições sem me perguntar.
+No fim abre https://[asuaempresa.pt] e confirma que o site carrega com o cadeado (HTTPS).</pre></div>
+  <h3>Forma B · por SSH</h3>
+  <p><b>SSH</b> é uma ligação segura entre o seu computador e a hospedagem, com uma chave em vez de password. Só funciona se o seu plano tiver acesso SSH.</p>
+  <div class="box"><span class="tag">Claude Code · preparar a chave SSH</span><button class="copy">Copiar</button><pre>Cria uma chave SSH ed25519 para a minha hospedagem e mostra-me só a chave PÚBLICA, para eu a adicionar no painel da hospedagem (secção SSH).
+Nunca me peças a password da hospedagem no chat.</pre></div>
+  <div class="box"><span class="tag">Claude Code · publicar por SSH</span><button class="copy">Copiar</button><pre>Liga-te por SSH à minha hospedagem com a chave que configurámos: utilizador [utilizador], servidor [servidor].
+Faz o build estático e envia apenas a pasta de saída para a pasta pública do site [public_html] com rsync.
+Antes de enviar, mostra-me o comando e espera pelo meu ok.
+Não apagues nada fora dessa pasta e não corras comandos destrutivos sem me perguntar.
+No fim confirma que https://[asuaempresa.pt] carrega com HTTPS.</pre></div>
+  <p class="warn">Segurança: a chave privada nunca sai do seu computador. Passwords e chaves não se colam no chat. Revê sempre os comandos antes de autorizar.</p>
+  <h3>Antes de publicar, o rodapé tem de ter</h3>
+  <ol class="q">
+    <li>Identificação: nome, NIF, morada e contactos.</li>
+    <li>Livro de Reclamações Eletrónico, visível.</li>
+    <li>Entidade de Resolução Alternativa de Litígios, se a empresa estiver vinculada.</li>
+    <li>Política de Privacidade e Política de Cookies, com banner que deixe recusar.</li>
+    <li>Termos e condições, se vender online.</li>
+    <li>Custo da chamada junto ao telefone (ex.: “Chamada para a rede móvel nacional”).</li>
+  </ol>
+  <p class="tip">Resumo informativo, não é aconselhamento jurídico.</p>
+</section>
+
+</main>
+<footer><div class="wrap">Guia da palestra “Do código à IA” · <a href="https://alameda-alphaville.vercel.app/">Alameda</a> · <a href="https://nedsonaliandrodev.github.io/imersao-10x/">IMERSÃO 10X</a></div></footer>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){var t=b.parentElement.querySelector('pre').innerText;navigator.clipboard.writeText(t).then(function(){b.textContent='Copiado';b.classList.add('ok');setTimeout(function(){b.textContent='Copiar';b.classList.remove('ok')},1800)})})});
+</script>
+</body>
+</html>

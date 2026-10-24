@@ -1,0 +1,34 @@
+1:"$Sreact.fragment"
+2:"/imersao-10x/_next/static/chunks/42onvq6nokjl2.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+6:"/imersao-10x/_next/static/chunks/1p9q69co3j7ds.js"
+7:I[20032,["$2","$6"],"default"]
+8:I[12539,["$2","$6"],"Nav"]
+9:I[34232,["$2","$6"],"default"]
+a:I[12539,["$2","$6"],"Manifesto"]
+b:I[12539,["$2","$6"],"Eclipse"]
+c:I[12539,["$2","$6"],"Lupa"]
+d:I[12539,["$2","$6"],"Materia"]
+e:I[12539,["$2","$6"],"Specs"]
+f:I[12539,["$2","$6"],"Reserva"]
+10:I[12539,["$2","$6"],"Footer"]
+11:I[97367,["$2"],"OutletBoundary"]
+12:"$Sreact.suspense"
+14:"ViewportBoundary"
+15:I[97367,["$2"],"$14"]
+17:"MetadataBoundary"
+18:I[97367,["$2"],"$17"]
+1a:I[68027,["$2"],"default",1]
+:HL["/imersao-10x/_next/static/chunks/0m3ndahmt8igq.css","style"]
+:HL["/imersao-10x/_next/static/media/01d6212a423b17a1-s.p.1pvupmngxrt5z.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/imersao-10x/_next/static/media/4bd950c905cec094-s.p.2cu9iw-l3ih8o.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/imersao-10x/_next/static/media/916cd8a3bde3edf8-s.p.0oace-s_gkfks.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/imersao-10x/_next/static/media/d4b605c61b941c57-s.p.1sj6eobyi31rd.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/imersao-10x/_next/static/media/d6c1ff7e86974212-s.p.40sczeszzbjw1.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+5:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","main",null,{"children":[["$","$L7",null,{}],["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{}],["$","$L10",null,{}]]}],[["$","script","script-0",{"src":"/imersao-10x/_next/static/chunks/1p9q69co3j7ds.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}],"p":false,"v":null}}]]
+0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/imersao-10x/_next/static/chunks/0m3ndahmt8igq.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/imersao-10x/_next/static/chunks/42onvq6nokjl2.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"pt","className":"nV1nCq_variable QALB7a_variable Rst4gW_variable BqeOpa_variable antialiased","children":["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],"p":false,"v":null},"c":"$Q5"},"h":{"r":["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","$L18",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$12",null,{"name":"Next.Metadata","children":"$L19"}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":false,"v":null}},"m":"$undefined","G":["$1a",[["$","link","0",{"rel":"stylesheet","href":"/imersao-10x/_next/static/chunks/0m3ndahmt8igq.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"NWFWnZogV0vQvoiGjspeM"}
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#070605"}]]
+1b:I[27201,["$2"],"IconMark"]
+13:null
+19:[["$","title","0",{"children":"IMERSÃO 10X · O tempo, visto por dentro"}],["$","meta","1",{"name":"description","content":"Alta relojoaria em ouro 18k com um calibre de grande complicação. Desça e entre na máquina."}],["$","link","2",{"rel":"icon","href":"/imersao-10x/icon.svg?icon.2s72e3g6wdben.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1b","3",{}]]
